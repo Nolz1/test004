@@ -1,0 +1,389 @@
+
+
+
+
+
+
+
+
+#hero{
+    height: 85vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 0 0 0 30px;
+
+    & article{
+        z-index: 4;
+        
+
+        & h3{
+            color: var(--col-1-);
+            font-family: var(--font-1-);
+        }
+    }
+}
+#about{
+    height: auto;
+    padding: 20vh 0 10vh 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+
+    & aside{
+        position: relative;
+        width: 60vw;
+        margin-left: 10vw;
+        padding-bottom: 3vh;
+
+        &::after{
+            content: "";
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            height: 4px;
+            width: 8vw;
+            background-color: var(--col-2-);
+        }
+    }
+    & article{
+        height: auto;
+        width: 40vw;
+        margin-left: 20vw;
+    }
+}
+#services{
+    height: auto;
+    width: 75vw;
+    padding: 5vh 10vw 10vh 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items:  flex-start;
+    flex-wrap: wrap;
+    gap: 40px;
+
+    & article{
+        height: auto;
+        width: 300px;
+        padding: 60px 40px;
+        box-shadow: 0px 10px 13px -7px var(--col-2-), 5px 5px 15px 5px white;
+        background-color: rgb(250, 250, 250);
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 15px;
+        transition: all 200ms ease;
+
+        &:hover{
+            box-shadow: none;
+            background-color: rgb(246, 245, 245);
+        }
+    }
+}
+#work{
+    height: auto;
+    width: 75vw;
+    padding: 25vh 5vw 10vh 5vw;
+    display: grid;
+    grid-template-areas: 
+    "one two" 
+    "tree four";
+    gap: 5vh;
+
+    & aside{
+        position: absolute;
+        top: 10vh;
+        right: 5vw;
+        height: auto;
+        width: 75vw;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        gap: 15px;
+
+        & h4{
+            text-align: end;
+        }
+        & button:hover i{
+            rotate: -45deg;
+        }
+
+    }
+    
+    & .workProjects{
+        aspect-ratio: 5 / 4;
+        position: relative;
+        padding: 50px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+        overflow: hidden;
+        border-radius: 30px;
+
+        &:nth-child(2){
+            grid-area: one;
+        }
+        &:nth-child(3){
+            grid-area: two;
+        }
+        &:nth-child(4){
+            grid-area: tree;
+        }
+        &:nth-child(5){
+            grid-area: four;
+        }
+        & h6{
+            color: var(--col-1-);
+            z-index: 3;
+        }
+        & button{
+            border: solid var(--col-1-) 1px;
+            border-radius: 36px;
+            z-index: 3;
+
+            & p{
+                font-weight: 400;
+                letter-spacing: 2px;
+            }
+        }
+        & img{
+            margin: -50px 0 0 -50px;
+            filter: brightness(70%);
+        }
+        &:hover button{
+            background-color: var(--col-1-);
+    
+            & p{
+                color: var(--col-2-);
+            }
+            & h6{
+                color: var(--col-2-);
+            }
+            & i{
+                color: var(--col-2-);
+            }
+        }
+    }
+}
+#facts{
+    height: auto;
+    width: 75vw;
+    padding: 5vh 5vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    row-gap: 5vh;
+
+    & h6{
+        height: auto;
+        width: 300px;
+        padding: 0 30px;
+    }
+    & article{
+        flex: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding: 0 30px;
+
+        & h5{
+            color: var(--col-2-);
+        }
+    }
+}
+#quote{
+    position: relative;
+    height: auto;
+    padding: 15vh 0 15vh 15vw;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+
+    & h4{
+        z-index: 4;
+
+        &:nth-child(1){
+            margin-left: -5vw;
+        }
+        &:nth-child(2){
+            margin-left: 5vw;
+            color: var(--col-1-);
+        }
+    }
+    &::after{
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: 50%;
+        width: 100%;
+        background-color: var(--col-2-);
+    }
+}
+#asets{
+    height: auto;
+    width: 80vw;
+    padding: 10vh 0 10vh 20vw;
+    margin: 0;
+    background-color: var(--col-2-);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 5vh;
+    
+    & aside{
+        width: 60vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 15px;
+
+        & h4{
+            color: var(--col-1-);
+        }
+        & h6{
+            color: var(--col-1-);
+            width: 40vw;
+            font-weight: 300;
+        }
+    }
+    & section{
+        position: relative;
+        height: 60vh;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        overflow: hidden;
+        overflow-x: scroll;
+        gap: 50px;
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+
+        & article{
+            position: relative;
+            flex: none;
+            height: 80%;
+            width: 330px;
+            padding: 40px;
+            background: linear-gradient(320deg, var(--col-4-) 10%, var(--col-2-) 100%);
+            border-radius: 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: flex-start;
+            overflow: hidden;
+            gap: 15px;
+    
+            &:nth-child(6){
+                margin-right: 10vw;
+            }
+            & h6{
+                color: var(--col-1-);
+            }
+            & p{
+                color: var(--col-1-);
+                font-weight: 500;
+            }
+            & img{
+                position: absolute;
+                top: 0;
+                left: -50px;
+                height: 60%;
+                width: 120%;
+                object-fit: cover;
+            }
+        }
+    }
+}
+
+
+
+@media (max-width: 1080px){
+    #about{
+        height: auto;
+        padding: 10vh 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: flex-start;
+    
+        & aside{
+            position: relative;
+            width: 70vw;
+            margin-left: 10vw;
+            padding-bottom: 3vh;
+    
+            &::after{
+                content: "";
+                position: absolute;
+                bottom: -4px;
+                left: 0;
+                height: 4px;
+                width: 8vw;
+                background-color: var(--col-2-);
+            }
+        }
+        & article{
+            height: auto;
+            width: 60vw;
+            margin-left: 20vw;
+        }
+    }
+    #work{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        overflow: hidden;
+        overflow-x: auto;
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+        & article{
+            flex: none;
+            width: 500px;
+        }
+    }
+    #facts{
+        justify-content: flex-start;
+    }
+    #quote{
+        & h4{
+            font-size: 6vw;
+        }
+    }
+}
+@media (max-width: 768px){
+    #work{
+        & article{
+            width: 400px;
+        }
+    }
+    #asets{
+        & section{
+            & article{
+                width: 300px;
+            }
+        }
+    }
+}
