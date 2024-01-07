@@ -1,0 +1,39 @@
+
+#cookieBanner{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    padding: 100px 3vw 50px 3vw;
+    height: auto;
+    width: 94vw;
+    color: var(--col-2-);
+    background-color: var(--col-1-);
+    display: none;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 20px;
+    z-index: 200;
+
+    & .bsr{
+        width: 80vw;
+    }
+
+    & div{
+        height: auto;
+        width: auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+}
+
+
+@media(max-width:1024px){
+    .coockies{
+        padding: 10px 0;
+    }
+}
