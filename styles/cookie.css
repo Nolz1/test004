@@ -14,7 +14,6 @@
     align-items: flex-start;
     gap: 20px;
     z-index: 200;
-    opacity: 0;
 
     & .bsr{
         width: 80vw;
